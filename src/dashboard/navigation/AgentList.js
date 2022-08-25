@@ -5,18 +5,21 @@ import ListItemText from "@mui/material/ListItemText";
 import List from "@mui/material/List";
 
 export default function AgentList() {
-  const Agent = ["Agent Bucharati", "Agent Mister", "Agent Dio", "Agent Jojo"];
+  const Agent = [
+    { id: "Bucharati", text: "Agent Bucharati" },
+    { id: "Mister", text: "Agent Mister" },
+    { id: "Dio", text: "Agent Dio" },
+    { id: "Jojo", text: "Agent Jojo" },
+  ];
   return (
     <List>
-      {Agent.map(
-        (text, index) => (
-          <ListItem key={text}>
-            <ListItemButton>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        )
-      )}
+      {Agent.map((name) => (
+        <ListItem key={name.text}>
+          <ListItemButton>
+            <ListItemText primary={name.text} />
+          </ListItemButton>
+        </ListItem>
+      ))}
     </List>
   );
 }
