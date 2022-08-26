@@ -6,7 +6,7 @@ export default function Dashboard() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Navigation />
-      <h1>Agent: 布加拉提</h1>
+      <h1>Home</h1>
     </Box>
   );
 }
