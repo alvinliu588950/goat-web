@@ -12,9 +12,9 @@ export default function AgentList() {
     { id: "Jojo", text: "Agent Jojo" },
   ];
   return (
-    <List>
+    <List id={Agent.id}>
       {Agent.map((name) => (
-        <ListItem key={name.text}>
+        <ListItem>
           <ListItemButton>
             <ListItemText primary={name.text} />
           </ListItemButton>
