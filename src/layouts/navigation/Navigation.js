@@ -8,7 +8,11 @@ export default function Navigation() {
   return (
     <>
       <NavBar onMenuBtnClick={() => setDrawerOpen((prev) => !prev)} />
-      <Drawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
+      <Drawer
+        setDrawerOpen={setDrawerOpen}
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+      />
     </>
   );
 }
