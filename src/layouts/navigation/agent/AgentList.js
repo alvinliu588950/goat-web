@@ -9,11 +9,11 @@ import { useNavigate } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-export default function AgentList() {
+export default function AgentList({setDrawerOpen}) {
   let navigate = useNavigate();
   const agents = [
     {
-      name: "dio",
+      name: "mudamuda",
       icon: <HomeIcon />,
     },
     {
@@ -31,6 +31,7 @@ export default function AgentList() {
         <ListItem key={agents.name}>
           <ListItemButton
             onClick={() => {
+              setDrawerOpen(false);
               navigate(`/agent/${agents.name}`);
             }}
           >

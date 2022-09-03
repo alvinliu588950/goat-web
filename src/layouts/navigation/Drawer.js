@@ -2,7 +2,7 @@ import React from "react";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import AgentList from "./agent/AgentList";
 
-export default function Drawer({ open, onClose }) {
+export default function Drawer({ open, onClose, setDrawerOpen }) {
   return (
     <SwipeableDrawer
       anchor="left"
@@ -10,7 +10,7 @@ export default function Drawer({ open, onClose }) {
       onClose={onClose}
       onOpen={() => {}}
     >
-      <AgentList />
+      <AgentList setDrawerOpen={setDrawerOpen}/>
     </SwipeableDrawer>
   );
 }
