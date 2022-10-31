@@ -18,18 +18,17 @@ export default function AgentList({ setDrawerOpen }) {
     {
       name: "mudamuda",
       icon: <HomeIcon />,
-      url: "https://goat-360609.de.r.appspot.com/agent/detail?name=mudamuda",
+      url: "/agent/mudamuda", //Testing if could get the url props
     },
     {
       name: "bucharati",
       icon: <HomeIcon />,
-      url: "000",
+      url: "/agent/bucharati",
     },
     {
       name: "jojo",
       icon: <HomeIcon />,
-      //Testing if could get the url props
-      url: "000",
+      url: "/agent/jojo",
     },
   ];
 
