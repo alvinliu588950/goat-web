@@ -1,0 +1,32 @@
+.form {
+  width: 95%;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: aqua;
+}
+
+.formbutton {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #8a2b06;
+  padding: 0.5rem 2rem;
+  background-color: #4299e1;
+  color: #1a202c;
+  border-radius: 25px;
+  width: flex;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.formbutton:hover {
+  background-color: #77a7fb;
+}
+
+.tablehead {
+  text-align: center;
+}

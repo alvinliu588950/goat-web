@@ -1,0 +1,22 @@
+.selfformbutton {
+    display:block;
+    margin-left: 1rem ;
+    border: 1px solid hsla(59, 92%, 51%, 0.192);
+    padding: 0.5rem 2rem;
+    background-color: #4299e1;
+    color: #1a202c;
+    border-radius: 25px;
+    width: 100%;
+    font: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .selfformbutton:hover{
+    background-color: #77a7fb;
+  }
+  
+  .selfformbutton:disabled {
+    opacity: 0.35;
+  }
