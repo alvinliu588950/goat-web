@@ -1,6 +1,6 @@
 import React from "react";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
-import AgentList from "./agent/AgentList";
+import FormList from "./lists/ListTitles";
 
 export default function Drawer({ open, onClose, setDrawerOpen }) {
   return (
@@ -10,7 +10,7 @@ export default function Drawer({ open, onClose, setDrawerOpen }) {
       onClose={onClose}
       onOpen={() => {}}
     >
-      <AgentList setDrawerOpen={setDrawerOpen}/>
+      <FormList setDrawerOpen={setDrawerOpen}/>
     </SwipeableDrawer>
   );
 }

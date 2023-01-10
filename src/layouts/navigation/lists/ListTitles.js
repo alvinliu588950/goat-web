@@ -10,33 +10,33 @@ import { useNavigate } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import axios from "axios";
 
-export default function AgentList({ setDrawerOpen }) {
+export default function ListTitles({ setDrawerOpen }) {
   let navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
 
-  const agents = [
+  const lists = [
     {
-      name: "mudamuda",
+      name: "Agent",
       icon: <HomeIcon />,
-      url: "/agent/mudamuda", //Testing if could get the url props
+      url: "/lists/agent", //Testing if could get the url props
     },
     {
-      name: "bucharati",
+      name: "Test",
       icon: <HomeIcon />,
-      url: "/agent/bucharati",
+      url: "/lists/test",
     },
     {
-      name: "jojo",
+      name: "Test 2",
       icon: <HomeIcon />,
-      url: "/agent/jojo",
+      url: "/lists/test2",
     },
   ];
 
-  const getAgentapi = async (agents) => {
+  const getAgentapi = async (lists) => {
     setIsLoading(true);
 
     await axios
-      .get(`${agents.url}`)
+      .get(`${lists.url}`)
       .then((res) => {
         setIsLoading(false);
         console.log(res);
@@ -48,17 +48,17 @@ export default function AgentList({ setDrawerOpen }) {
 
   return (
     <List>
-      {agents.map((agents) => (
-        <ListItem key={agents.name}>
+      {lists.map((lists) => (
+        <ListItem key={lists.name}>
           <ListItemButton
             onClick={() => {
               setDrawerOpen(false);
-              getAgentapi(agents);
-              navigate(`/agent/${agents.name}`);
+              getAgentapi(lists);
+              navigate(`/${lists.name}`);
             }}
           >
-            <ListItemIcon> {agents.icon} </ListItemIcon>
-            <ListItemText primary={agents.name} />
+            <ListItemIcon> {lists.icon} </ListItemIcon>
+            <ListItemText primary={lists.name} />
           </ListItemButton>
           {isLoading && <p>Loading...</p>}
         </ListItem>
